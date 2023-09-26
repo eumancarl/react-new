@@ -1,4 +1,4 @@
-import logo from './logo.svg';
+//import logo from './logo.svg';
 import './App.css';
 import ReactDOM from 'react-dom';
 import { BrowserRouter as Router } from 'react-router-dom';
@@ -31,7 +31,7 @@ const App = () => {
     if (window.confirm('sure ka?')) {
       alert('OKAY')
       axios
-        .delete(`http://localhost:8000/api/post/${id}`, {
+        .delete(`http://localhost:8000/api/posts/${id}`, {
         })
         .then((res) => {
           console.log(res);
@@ -67,7 +67,7 @@ const App = () => {
     <div>
     <Nav /><br/>
     <div className='container pb-5' >
-      <Title title='Welcome to my Blog' user='Zoro' />
+      <Title title='Welcome to my Blog' user='EumanCarl' />
       {posts.map((post, i) => (
         <div className='container'>
           <PostList post={post} /><br />
